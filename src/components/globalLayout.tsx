@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./footer";
 import Navbar from "./navbar";
 import ScrollToTopButton from "./scrollToTopButton";
 
@@ -11,6 +12,7 @@ const GlobalLayout = ({ children }: pageProps) => {
 		<>
 			<Navbar />
 			{children}
+			<Footer />
 			<ScrollToTopButton />
 		</>
 	);
