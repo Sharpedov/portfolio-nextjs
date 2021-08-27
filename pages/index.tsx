@@ -6,7 +6,7 @@ export default function Home() {
 			<Head>
 				<title>Portfolio - Adrian Piątek</title>
 			</Head>
-			<h1>hello</h1>
+			<h1 style={{ minHeight: "200vh" }}>hello</h1>
 		</>
 	);
 }
