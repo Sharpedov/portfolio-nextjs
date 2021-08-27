@@ -1,4 +1,6 @@
 import Head from "next/head";
+import React from "react";
+import HomeTemplate from "src/templates/home";
 
 export default function Home() {
 	return (
@@ -6,7 +8,7 @@ export default function Home() {
 			<Head>
 				<title>Portfolio - Adrian Piątek</title>
 			</Head>
-			<h1 style={{ minHeight: "200vh" }}>hello</h1>
+			<HomeTemplate />
 		</>
 	);
 }
