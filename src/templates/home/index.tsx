@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Contact from "./contact";
 import Hero from "./hero";
 import Projects from "./projects";
 
@@ -11,6 +12,7 @@ const HomeTemplate = ({}: pageProps) => {
 			<Wrapper>
 				<Hero />
 				<Projects />
+				<Contact />
 			</Wrapper>
 		</Container>
 	);

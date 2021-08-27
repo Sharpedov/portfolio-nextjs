@@ -7,7 +7,12 @@
 
 	"projects.title": "Projects",
 
+	"contact.title": "Contact",
+	"contact.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at lectus quis augue egestas ultricies eu nec augue. Praesent at pulvinar est, laoreet blandit nulla. ",
+
 	"button.project.visitWebsite": "Visit website",
+
+	"copied": "Copied!",
 
 	"modal.close": "Close"
 }
