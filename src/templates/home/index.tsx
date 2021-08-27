@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Hero from "./hero";
+import Projects from "./projects";
 
 interface pageProps {}
 
@@ -9,6 +10,7 @@ const HomeTemplate = ({}: pageProps) => {
 		<Container>
 			<Wrapper>
 				<Hero />
+				<Projects />
 			</Wrapper>
 		</Container>
 	);

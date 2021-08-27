@@ -3,5 +3,11 @@
 	"language.en": "English",
 
 	"hero.title": "Welcome to My Portfolio",
-	"hero.subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at lectus quis augue egestas ultricies eu nec augue. Praesent at pulvinar est, laoreet blandit nulla. "
+	"hero.subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at lectus quis augue egestas ultricies eu nec augue. Praesent at pulvinar est, laoreet blandit nulla.",
+
+	"projects.title": "Projects",
+
+	"button.project.visitWebsite": "Visit website",
+
+	"modal.close": "Close"
 }

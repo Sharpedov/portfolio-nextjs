@@ -194,7 +194,7 @@ export const Subtitle = styled.p`
 	font-size: 16px;
 	line-height: 1.5;
 	font-weight: 300;
-	color: ${({ theme }) => theme.colors.primary1};
+	color: ${({ theme }) => theme.colors.color.primary};
 	opacity: 0.5;
 	animation: ${appearAnimation} 0.7s 0.5s cubic-bezier(0, 0.45, 0.15, 1) both;
 
