@@ -7,6 +7,7 @@ import { IntlProvider } from "react-intl";
 import pl from "src/locales/pl/pl.json";
 import en from "src/locales/en/en.json";
 import { useRouter } from "next/dist/client/router";
+import { useEffect } from "react";
 
 const messages = {
 	pl,
@@ -14,7 +15,17 @@ const messages = {
 };
 
 function MyApp({ Component, pageProps }) {
-	const { locale } = useRouter();
+	const { locale, push } = useRouter();
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			if (!localStorage.getItem("language")) return;
+			push(`/${JSON.parse(localStorage.getItem("language"))}`, undefined, {
+				scroll: false,
+			});
+		}
+		// eslint-disable-next-line
+	}, []);
 
 	return (
 		<StyledThemeProvider theme={defaultTheme}>
