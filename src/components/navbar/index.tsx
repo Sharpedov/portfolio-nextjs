@@ -69,6 +69,7 @@ const Navbar = ({}: pageProps) => {
 					}}
 					animate={{
 						y: isScrolling ? "0%" : "-100%",
+						transition: { duration: 0.25 },
 					}}
 				>
 					{navListData.map((item, i) => (
