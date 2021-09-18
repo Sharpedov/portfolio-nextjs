@@ -13,12 +13,12 @@ export const socialData = [
 		id: 2,
 		title: "Facebook",
 		icon: FacebookIcon,
-		href: "https://github.com/Sharpedov",
+		href: "https://www.facebook.com/adrian.piatek.56481",
 	},
 	{
 		id: 3,
 		title: "LinkedIn",
 		icon: LinkedInIcon,
-		href: "https://github.com/Sharpedov",
+		href: "https://www.linkedin.com/in/adrian-pi%C4%85tek-942204209/",
 	},
 ];
