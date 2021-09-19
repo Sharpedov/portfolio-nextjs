@@ -2,13 +2,12 @@
 	"language.pl": "Polski",
 	"language.en": "Angielski",
 
-	"hero.title": "Witaj w moim portfolio",
-	"hero.subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at lectus quis augue egestas ultricies eu nec augue. Praesent at pulvinar est, laoreet blandit nulla.",
+	"hero.title": "Witaj na moim portfolio",
+	"hero.subtitle": "Jestem samoukiem który zamierza zostać React/Next.js Deweloperem.",
 
 	"projects.title": "Projekty",
 
 	"contact.title": "Kontakt",
-	"contact.description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at lectus quis augue egestas ultricies eu nec augue. Praesent at pulvinar est, laoreet blandit nulla. ",
 
 	"footer.copyright": "Wszelkie prawa zastrzeżone.",
 
