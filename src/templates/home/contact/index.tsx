@@ -20,9 +20,6 @@ const Contact = ({}: pageProps) => {
 			<Title>{f({ id: "contact.title" })}</Title>
 			<Content>
 				<ContentColumn1>
-					<ContactDescription>
-						{f({ id: "contact.description" })}
-					</ContactDescription>
 					<CopyEmailButton
 						onClick={() => copyHandler(copyEmailRef.current.textContent)}
 					>
@@ -67,7 +64,11 @@ const SectionContainer = styled.section`
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	padding-top: 6rem;
+	padding: 6rem 0 2rem 0;
+
+	@media ${(props) => props.theme.breakpoints.lg} {
+		padding: 6rem 0 12rem 0;
+	}
 `;
 
 const Title = styled.h2`
@@ -104,7 +105,7 @@ const Content = styled.div`
 	@media ${({ theme }) => theme.breakpoints.md} {
 		padding: 3.2rem 4.8rem 6rem;
 	}
-	@media ${(props) => props.theme.breakpoints.lg} {
+	@media ${({ theme }) => theme.breakpoints.lg} {
 		grid-template-columns: repeat(2, 1fr);
 	}
 `;
@@ -116,12 +117,12 @@ const ContentColumn1 = styled.div`
 	gap: 35px 0;
 	margin-top: 60px;
 
-	@media ${(props) => props.theme.breakpoints.lg} {
+	@media ${({ theme }) => theme.breakpoints.lg} {
 		gap: 45px 0;
 		align-items: flex-start;
 		margin-top: 70px;
 	}
-	@media ${(props) => props.theme.breakpoints.xl} {
+	@media ${({ theme }) => theme.breakpoints.xl} {
 		margin-top: 80px;
 	}
 `;
