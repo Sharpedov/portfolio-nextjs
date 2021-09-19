@@ -174,8 +174,8 @@ const Project = ({ project }: pageProps) => {
 export default Project;
 
 const ArticleContainer = styled(CardActionArea)`
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
 	position: relative;
 	color: ${({ theme }) => theme.colors.color.primary};
 	width: 100%;
