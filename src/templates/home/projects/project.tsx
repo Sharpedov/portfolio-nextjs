@@ -17,7 +17,16 @@ interface pageProps {
 }
 
 const Project = ({ project }: pageProps) => {
-	const { id, title, description, href, source, images, framework } = project;
+	const {
+		id,
+		title,
+		description,
+		href,
+		source,
+		images,
+		framework,
+		technologies,
+	} = project;
 	const [selectedImage, setSelectedImage] = useState<number>(0);
 	const [showImagePreview, setShowImagePreview] = useState<boolean>(false);
 	const { formatMessage: f } = useIntl();
@@ -43,69 +52,72 @@ const Project = ({ project }: pageProps) => {
 
 	return (
 		<>
-			<ArticleContainer>
-				<Wrapper component="div">
-					<ImageWrapper>
-						{images.map((image, i) => (
-							<ImageSlide
-								key={image}
-								style={{ transform: `translateX(${selectedImage * -100}%)` }}
-								onClick={() => setShowImagePreview(true)}
-							>
-								<Image
-									alt={title}
-									src={image}
-									layout="fill"
-									objectFit="cover"
-									draggable={false}
-								/>
-							</ImageSlide>
-						))}
-					</ImageWrapper>
-					<Content>
-						<Navigation>
-							<NavigationArrow
-								onClick={() => navigationArrowHandler("prev")}
-								disabled={selectedImage === 0}
-							>
-								<NavigateBeforeRoundedIcon className="imageNavigationArrow__icon" />
-							</NavigationArrow>
-							<NavigationDots>
-								{images.map((_, i) => (
-									<NavigationDot
-										key={`navigationDot-${i}`}
-										active={i === selectedImage}
-										onClick={() => navigationDotHandler(i)}
-									/>
-								))}
-							</NavigationDots>
-							<NavigationArrow
-								onClick={() => navigationArrowHandler("next")}
-								disabled={selectedImage === imagesLength - 1}
-							>
-								<NavigateNextRoundedIcon className="imageNavigationArrow__icon" />
-							</NavigationArrow>
-						</Navigation>
-						<ProjectNumberAndFramework>
-							<span>{`0${id}`}</span>
-							<span />
-							<span>framework {framework}</span>
-						</ProjectNumberAndFramework>
-						<ProjectTitle>{title}</ProjectTitle>
-						<ProjectDescription>{description[locale]}</ProjectDescription>
-						<ButtonsRow>
-							<CustomButton href={href} targetBlank={true}>
-								{f({ id: "button.project.visitWebsite" })}
-							</CustomButton>
-							<CustomIconButton
-								ariaLabel={source}
-								href={source}
-								Icon={GitHubIcon}
-								targetBlank={true}
+			<ArticleContainer component="article">
+				<ImageWrapper>
+					{images.map((image, i) => (
+						<ImageSlide
+							key={image}
+							style={{ transform: `translateX(${selectedImage * -100}%)` }}
+							onClick={() => setShowImagePreview(true)}
+						>
+							<Image
+								alt={title}
+								src={image}
+								layout="fill"
+								objectFit="cover"
+								draggable={false}
 							/>
-						</ButtonsRow>
-					</Content>
-				</Wrapper>
+						</ImageSlide>
+					))}
+				</ImageWrapper>
+				<Content>
+					<Navigation>
+						<NavigationArrow
+							onClick={() => navigationArrowHandler("prev")}
+							disabled={selectedImage === 0}
+						>
+							<NavigateBeforeRoundedIcon className="imageNavigationArrow__icon" />
+						</NavigationArrow>
+						<NavigationDots>
+							{images.map((_, i) => (
+								<NavigationDot
+									key={`navigationDot-${i}`}
+									active={i === selectedImage}
+									onClick={() => navigationDotHandler(i)}
+								/>
+							))}
+						</NavigationDots>
+						<NavigationArrow
+							onClick={() => navigationArrowHandler("next")}
+							disabled={selectedImage === imagesLength - 1}
+						>
+							<NavigateNextRoundedIcon className="imageNavigationArrow__icon" />
+						</NavigationArrow>
+					</Navigation>
+					<ProjectNumberAndFramework>
+						<span>{`0${id}`}</span>
+						<span />
+						<span>framework {framework}</span>
+					</ProjectNumberAndFramework>
+					<ProjectTitle>{title}</ProjectTitle>
+					<ProjectDescription>{description[locale]}</ProjectDescription>
+					<ProjectTechnologies>
+						{technologies.map((tech, i) => (
+							<ProjectTech key={`${tech}-${i}`}>{tech}</ProjectTech>
+						))}
+					</ProjectTechnologies>
+					<ButtonsRow>
+						<CustomButton href={href} targetBlank={true}>
+							{f({ id: "button.project.visitWebsite" })}
+						</CustomButton>
+						<CustomIconButton
+							ariaLabel={source}
+							href={source}
+							Icon={GitHubIcon}
+							targetBlank={true}
+						/>
+					</ButtonsRow>
+				</Content>
 			</ArticleContainer>
 			<ImageModal
 				isOpen={showImagePreview}
@@ -161,7 +173,7 @@ const Project = ({ project }: pageProps) => {
 
 export default Project;
 
-const ArticleContainer = styled.article`
+const ArticleContainer = styled(CardActionArea)`
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -193,8 +205,6 @@ const ArticleContainer = styled.article`
 			);
 	}
 `;
-
-const Wrapper = styled(CardActionArea)``;
 
 const ImageWrapper = styled.div`
 	position: relative;
@@ -427,6 +437,18 @@ const ProjectDescription = styled.p`
 		font-size: 16px;
 		line-height: 1.7;
 	}
+`;
+
+const ProjectTechnologies = styled.ul`
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+`;
+
+const ProjectTech = styled.li`
+	opacity: 0.85;
+	font-size: 1.4rem;
+	user-select: none;
 `;
 
 const ButtonsRow = styled.div`
