@@ -4,8 +4,8 @@ export const projectsData = [
 		framework: "Next.js",
 		title: "Posts",
 		description: {
-			pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula tellus, lacinia ut ligula in, vulputate cursus est. Nunc sed urna ut mauris sagittis pulvinar vel ac elit.",
-			en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula tellus, lacinia ut ligula in, vulputate cursus est. Nunc sed urna ut mauris sagittis pulvinar vel ac elit.",
+			pl: "W tej apce możemy ogladać posty jak i je publikować.",
+			en: "This App is for viewing and publishing posts.",
 		},
 		images: [
 			"/projects/project_2/Screenshot_1.png",
@@ -18,14 +18,22 @@ export const projectsData = [
 		],
 		href: "https://posts-nextjs-lemon.vercel.app/",
 		source: "https://github.com/Sharpedov/posts-nextjs",
+		technologies: [
+			"React",
+			"Next.js",
+			"Redux",
+			"SWR",
+			"MongoDB",
+			"styled-components",
+		],
 	},
 	{
 		id: 2,
 		framework: "Next.js",
 		title: "Eshop ecommerce",
 		description: {
-			pl: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula tellus, lacinia ut ligula in, vulputate cursus est. Nunc sed urna ut mauris sagittis pulvinar vel ac elit.",
-			en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula tellus, lacinia ut ligula in, vulputate cursus est. Nunc sed urna ut mauris sagittis pulvinar vel ac elit.",
+			pl: "Sklep internetowy, w którym możesz kupić ciuchy dla kobiet jak i mężczyzn.",
+			en: "Ecommerce app, where you can buy clothes for men and women.",
 		},
 		images: [
 			"/projects/project_1/Screenshot_1.png",
@@ -38,5 +46,14 @@ export const projectsData = [
 		],
 		href: "https://eshop-portfolio-1.vercel.app/",
 		source: "https://github.com/Sharpedov/eshop_portfolio_1",
+		technologies: [
+			"React",
+			"Next.js",
+			"Redux",
+			"SWR",
+			"Stripe",
+			"MongoDB",
+			"styled-components",
+		],
 	},
 ];
