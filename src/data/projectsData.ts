@@ -56,4 +56,17 @@ export const projectsData = [
 			"styled-components",
 		],
 	},
+	{
+		id: 3,
+		framework: "React.js",
+		title: "Memory game",
+		description: {
+			pl: "Gra pamięciowa z pokemonami",
+			en: "Pokemon memory game",
+		},
+		images: ["/projects/project_3/Screenshot_1.png"],
+		href: "https://memory-game-react-liart.vercel.app/",
+		source: "https://github.com/Sharpedov/memory-game-react",
+		technologies: ["React", "Redux", "styled-components"],
+	},
 ];
